@@ -14,17 +14,28 @@ import { Component } from '@angular/core';
 })
 
 export class SandboxComponent{
-    name = 'John Poe';
-    age = 45;
+    name:string = 'John Poe';
+    age:number = 45;
     person = {
         firstName: 'Steve',
         lastName: 'Smith'
-    }
+    };
+    hasChildren:boolean = true;
+    city:any = 'San Diego';
+    myNumbersArray:number[] = [1,2,3];
+    myStringsArray:string[] = ['a', 'b', 'c'];
+    myAnyArray:any[] = [1, 2, 'hello'];
+    myTuple: [string, number] = ['hello', 1];
+    unusable: void = undefined;
+    u: undefined = undefined;
+    n: null = null;
+    
 
     constructor(){
         console.log('constructor running');
         //this.age = 45;
         this.hasBirthday();
+        this.hasChildren = false;
     }
 
     hasBirthday(){
