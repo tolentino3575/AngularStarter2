@@ -3,15 +3,8 @@ import { Customer } from './Customer';
 
 @Component({
     selector: 'sandbox',
-    template: `
-        <h1>Hello {{ name }} is {{ age }} years old</h1>
-        <h2>My name is {{ person.firstName }}. Last name {{ person.lastName }}</h2>    
-        <ul>
-            <li>{{ 'Hello World' }}</li>
-            <li>{{ 1+1 }}</li>
-            <li>{{ showAge() }}</li>
-        </ul>
-    `
+    templateUrl: `./sandbox.component.html` ,
+    styleUrls:['./sandbox.component.css']
 })
 
 export class SandboxComponent{
