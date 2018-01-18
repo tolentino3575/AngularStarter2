@@ -5,3 +5,16 @@
         <li>{{ 1+1 }}</li>
         <li>{{ showAge() }}</li>
     </ul>
+
+    <ul>
+        <li *ngFor="let person of people; let i=index">
+            {{ i + 1 }} {{ person }}
+        </li>
+    </ul>
+
+    <ul>
+        <li *ngFor="let person of people2; let i=index">
+            {{ person.firstName }} {{ person.lastName }}
+        </li>
+    </ul>
+

@@ -25,6 +25,18 @@ export class SandboxComponent{
     customer:Customer;
     customers:Customer[];
 
+    people = ['Rick','Darryl', 'Carl', 'Glenn'];
+    people2 =[
+        {
+            firstName: 'Rick',
+            lastName: 'Grimes'
+        },
+        {
+            firstName: 'Darryl',
+            lastName: 'Dixon'
+        }
+    ];
+
     constructor(){
         console.log('constructor running');
         this.hasBirthday();
@@ -34,7 +46,8 @@ export class SandboxComponent{
             id: 1,
             name: 'Johnny',
             email: 'jj@gmail.com'
-        }
+        };
+
         this.customers =[
             {
                 id: 1,
@@ -46,7 +59,9 @@ export class SandboxComponent{
                 name: 'Donny',
                 email: 'd@gmail.com'
             }
-        ]
+        ];
+
+        this.people[1] = 'Carol';
     }
 
     hasBirthday(){
