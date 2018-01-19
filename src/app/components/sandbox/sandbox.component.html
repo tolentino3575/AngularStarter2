@@ -1,20 +1,38 @@
-<h1 class="special">Hello {{ name }} is {{ age }} years old</h1>
-<h2>My name is {{ person.firstName }}. Last name {{ person.lastName }}</h2>    
-    <ul>
-        <li>{{ 'Hello World' }}</li>
-        <li>{{ 1+1 }}</li>
-        <li>{{ showAge() }}</li>
-    </ul>
+<h1 class="special">
+    <!--
+        <span *ngIf="showName; else noName">{{ name }}</span>
+        <ng-template #noName>World</ng-template>
+    -->
+   <p>Hello {{ showName ? name : 'World' }}</p>
+</h1>
 
-    <ul>
-        <li *ngFor="let person of people; let i=index">
-            {{ i + 1 }} {{ person }}
-        </li>
-    </ul>
+<h4>
+    <div [ngSwitch]="greeting">
+        <div *ngSwitchCase="1">Hello World</div>
+        <div *ngSwitchCase="2">Hi</div>
+        <div *ngSwitchDefault>World</div>
+    </div>
+</h4>
 
-    <ul>
-        <li *ngFor="let person of people2; let i=index">
-            {{ person.firstName }} {{ person.lastName }}
-        </li>
-    </ul>
+<h2>My name is {{ person.firstName }} {{ person.lastName }} 
+    I am {{ age }}
+</h2>    
+
+<ul>
+    <li>{{ 'Hello World' }}</li>
+    <li>{{ 1+1 }}</li>
+    <li>{{ showAge() }}</li>
+</ul>
+
+<ul>
+    <li *ngFor="let person of people; let i=index">
+        {{ i + 1 }} {{ person }}
+    </li>
+</ul>
+
+<ul>
+    <li *ngFor="let person of people2; let i=index">
+        {{ person.firstName }} {{ person.lastName }}
+    </li>
+</ul>
 

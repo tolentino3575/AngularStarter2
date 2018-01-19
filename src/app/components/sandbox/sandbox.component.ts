@@ -22,6 +22,9 @@ export class SandboxComponent{
     myAnyArray:any[] = [1, 2, 'hello'];
     myTuple: [string, number] = ['hello', 1];
 
+    showName:boolean = true;
+    greeting:number = 1;
+
     customer:Customer;
     customers:Customer[];
 
