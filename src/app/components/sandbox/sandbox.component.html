@@ -31,8 +31,27 @@
 </ul>
 
 <ul>
-    <li *ngFor="let person of people2; let i=index">
+    <li *ngFor="let person of people2">
         {{ person.firstName }} {{ person.lastName }}
     </li>
 </ul>
 
+<!-- 3 ways to bind properties -->
+<div>
+    <img src="{{ imageUrl }}">
+</div>
+
+<div>
+    <img [src]="imageUrl">
+</div>
+
+<div>
+    <img bind-src="imageUrl">
+</div>
+
+<h4>Image Location: <span [textContent]="imageUrl"></span></h4>
+
+<hr>
+<h2>Create Post</h2>
+<p [hidden]="isUnchanged">Changed, please save</p>
+<button [disabled]="isUnchanged">Save</button>

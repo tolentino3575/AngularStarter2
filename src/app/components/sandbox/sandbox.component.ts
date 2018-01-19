@@ -14,13 +14,6 @@ export class SandboxComponent{
         firstName: 'Steve',
         lastName: 'Smith'
     };
-    hasChildren:boolean = true;
-    numChildren:number = 2;
-    city:any = 'San Diego';
-    myNumbersArray:number[] = [1,2,3];
-    myStringsArray:string[] = ['a', 'b', 'c'];
-    myAnyArray:any[] = [1, 2, 'hello'];
-    myTuple: [string, number] = ['hello', 1];
 
     showName:boolean = true;
     greeting:number = 1;
@@ -40,10 +33,11 @@ export class SandboxComponent{
         }
     ];
 
+    imageUrl = 'http://lorempixel.com/400/200';
+    isUnchanged:boolean = true;
+
     constructor(){
-        console.log('constructor running');
         this.hasBirthday();
-        this.hasChildren = false;
 
         this.customer ={
             id: 1,
