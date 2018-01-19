@@ -36,6 +36,10 @@ export class SandboxComponent{
     imageUrl = 'http://lorempixel.com/400/200';
     isUnchanged:boolean = true;
 
+    isSpecial:boolean = true;
+    canSave:boolean = true;
+    currentClasses = {};
+
     constructor(){
         this.hasBirthday();
 
@@ -59,6 +63,8 @@ export class SandboxComponent{
         ];
 
         this.people[1] = 'Carol';
+
+        this.setCurrentClasses();
     }
 
     hasBirthday(){
@@ -67,5 +73,12 @@ export class SandboxComponent{
 
     showAge(){
         return this.age;
+    }
+
+    setCurrentClasses(){
+        this.currentClasses = {
+            savable: this.canSave,
+            special: this.isSpecial
+        }
     }
 }

@@ -55,3 +55,6 @@
 <h2>Create Post</h2>
 <p [hidden]="isUnchanged">Changed, please save</p>
 <button [disabled]="isUnchanged">Save</button>
+
+<h4 [class.special]="isSpecial">Binding is special</h4>
+<h4 [ngClass]="currentClasses">Initially special and savable</h4>
